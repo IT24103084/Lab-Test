@@ -24,3 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => {
     console.log("Database connection error:", err);
   });
+
+  app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
