@@ -7,12 +7,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Test route
+// test route
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-// Connect DB + start server
+// connect DB and start server
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Database connected");
